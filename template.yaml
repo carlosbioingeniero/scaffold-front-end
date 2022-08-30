@@ -15,33 +15,33 @@ spec:
   parameters:
     - title: Ingrese los parámetros de configuracion
       required:
-        - package
-        - type
-        - name
+        - package1
+        - type1
+        - name1
 
       properties:
-        name:
+        name1:
           title: Name
           type: string
           description: Unique name of the component
           ui:autofocus: true
           ui:options:
             rows: 5
-        package:
+        package1:
           title: Package
           type: string
           default: co.com.bancolombia
           ui:autofocus: true
           ui:options:
             rows: 5
-        type:
+        type1:
           title: Type
           type: string
           description: Reactivo o imperativo
           ui:autofocus: true
           ui:options:
             rows: 5
-        coverage:
+        coverage1:
           title: Type
           type: string
           default: jacoco
@@ -49,7 +49,7 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-        lombok:
+        lombok1:
           title: lombok
           type: boolean
           default: true
@@ -62,7 +62,7 @@ spec:
       required:
         - accessToken
       properties:
-        accessToken:
+        accessToken1:
           title: accessToken
           type: string
           description: Token para ejecutar back de Mauricio
