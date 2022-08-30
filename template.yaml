@@ -2,10 +2,9 @@ apiVersion: scaffolder.backstage.io/v1beta3
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
 kind: Template
 metadata:
-  name: scaffoldfrontend
-  title: Scaffold Front End
-  description: Crea un artefacto basado en el Scaffold de Front End
-  
+  name: example-nodejs-template1
+  title: Scaffold Clean Architecture Java
+  description: Crea un artefacto basado en el Scaffold de Clean Architecture para Java
 spec:
   owner: user:guest
   type: service
@@ -15,33 +14,33 @@ spec:
   parameters:
     - title: Ingrese los parámetros de configuracion
       required:
-        - package1
-        - type1
-        - name1
+        - package
+        - type
+        - name
 
       properties:
-        name1:
+        name:
           title: Name
           type: string
           description: Unique name of the component
           ui:autofocus: true
           ui:options:
             rows: 5
-        package1:
+        package:
           title: Package
           type: string
           default: co.com.bancolombia
           ui:autofocus: true
           ui:options:
             rows: 5
-        type1:
+        type:
           title: Type
           type: string
           description: Reactivo o imperativo
           ui:autofocus: true
           ui:options:
             rows: 5
-        coverage1:
+        coverage:
           title: Type
           type: string
           default: jacoco
@@ -49,7 +48,7 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-        lombok1:
+        lombok:
           title: lombok
           type: boolean
           default: true
@@ -57,20 +56,6 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-
-    - title: Credentials
-      required:
-        - accessToken
-      properties:
-        accessToken1:
-          title: accessToken
-          type: string
-          description: Token para ejecutar back de Mauricio
-          ui:autofocus: true
-          ui:options:
-            rows: 5
-
-
     #- title: Choose a location
     #  required:
     #    - repoUrl
@@ -103,7 +88,7 @@ spec:
         repoUrl: 'github.com?repo=build--scaffold&owner=maocq'
         workflowId: '32474166'
         branchOrTagName: main
-        token: ${{ parameters.accessToken }}
+        token: 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
         workflowInputs:
           data: '{"models" : ["User", "Juanes"], "useCases" : ["CreateUser", "NewAccount"]}'
 
