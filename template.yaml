@@ -6,11 +6,9 @@ metadata:
   title: Scaffold Front End
   description: Crea un artefacto basado en el Scaffold de Front End
   tags:
-    - Angular
-    - React
-    - Microfronts
     - recommended
-  
+    - Angular
+    - React  
 spec:
   owner: user:guest
   type: service
