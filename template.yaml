@@ -5,10 +5,7 @@ metadata:
   name: scaffold_front_end
   title: Scaffold Front End
   description: Crea un artefacto basado en el Scaffold de Front End
-  tags:
-    - recommended
-    - Angular
-    - React  
+  tags: ['recommended', 'react'] 
 spec:
   owner: user:guest
   type: service
