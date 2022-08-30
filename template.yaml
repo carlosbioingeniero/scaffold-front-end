@@ -19,60 +19,20 @@ spec:
         - name
 
       properties:
-        name:
+        hola:
           title: Name
           type: string
           description: Unique name of the component
           ui:autofocus: true
           ui:options:
             rows: 5
-        package:
-          title: Package
-          type: string
-          default: co.com.bancolombia
-          ui:autofocus: true
-          ui:options:
-            rows: 5
-        type:
-          title: Type
-          type: string
-          description: Reactivo o imperativo
-          ui:autofocus: true
-          ui:options:
-            rows: 5
-        coverage:
-          title: Type
-          type: string
-          default: jacoco
-          description: Cobertura pruebas unitarias
-          ui:autofocus: true
-          ui:options:
-            rows: 5
-        lombok:
-          title: lombok
-          type: boolean
-          default: true
-          description: true or false
-          ui:autofocus: true
-          ui:options:
-            rows: 5
-    #- title: Choose a location
-    #  required:
-    #    - repoUrl
-    #  properties:
-    #    repoUrl:
-    #      title: Repository Location
-    #      type: string
-    #      ui:field: RepoUrlPicker
-    #      ui:options:
-    #        allowedHosts:
-    #          - github.com
+       
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
   steps:
     # Each step executes an action, in this case one templates files into the working directory.
-    - id: fetch-base
+    - id: fetch-base1
       name: Fetch Base
       action: fetch:template
       input:
@@ -81,7 +41,7 @@ spec:
           name: ${{ parameters.name }}
 
     # This step publishes the contents of the working directory to GitHub.
-    - id: create
+    - id: create1
       name: Create
       action: github:actions:dispatch
       input:
@@ -105,7 +65,7 @@ spec:
   output:
     links:
       - title: Repository
-        url: ${{ steps.create.output.remoteUrl }}
+        url: ${{ steps.create1.output.remoteUrl }}
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
